@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+  <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+
+  <title>Player</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    video {
+      width: 100%;
+      max-width: 1200px;
+    }
+  </style>
+</head>
+<body>
+
+<video controls autoplay>
+  <source id="videoSource">
+</video>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("videoSource").src = params.get("video");
+</script>
+
+</body>
+</html>

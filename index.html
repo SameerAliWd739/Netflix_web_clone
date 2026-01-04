@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/293abf4b96.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Netflix UI Clone | Educational Project</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <img src="img/netflix-logo.png" alt="Netfilx Logo" class="nav-logo">
+        <ul class="main-nav-menu">
+          <li class="nav-li">
+            <form>
+              <div class="language-selector-wrapper">
+                <select class="language-selector">
+                  <option value="english">English</option>
+                  <option value="espanol">Espanol</option>
+                </select>
+              </div>
+            </form>
+          </li>
+          <li class="nav-li">
+            <a class="sign-in-btn" href="signup.html" target="_blank">Sign In</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-showcase-text-container">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <p class="showcase-p">Starts at $7.99. Cancel anytime.</p>
+        <p class="showcase-p mt-1">Ready to watch? Enter your email to create or restart your membership.</p>
+        <form class="email-cta-form">
+          <input type="email" class="email-input" placeholder="Email address" required>
+          <button class="get-started-btn" type="submit">Get Started <i class="fa-solid fa-chevron-right"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="red-divider"></div>
+
+  <main>
+    <section class="popcorn-ad">
+      <div class="container">
+        <div class="popcorn-banner-container">
+          <div class="popcorn-img-container">
+            <img class="popcorn-img" src="img/popcorn-nobg.png">
+          </div>
+          <div class="banner-content-container">
+            <div class="banner-text-container">
+              <h2 class="banner-header">The Netflix you love for just $7.99.</h2>
+              <p class="banner-p">Get our most affordable, ad-supported plan.</p>
+            </div>
+            <div class="banner-button-container">
+              <button type="button" class="learn-more-btn">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="trending-now">
+  <div class="container">
+     <h2>Trending Now</h2>
+
+    <div class="movie-container">
+      <img src="img/netflix-movie-1.jpg" class="netflix-movie" onclick="openModal(movies[0])">
+      <img src="img/netflix-movie-2.jpg" class="netflix-movie" onclick="openModal(movies[1])">
+      <img src="img/netflix-movie-3.jpg" class="netflix-movie" onclick="openModal(movies[2])">
+      <img src="img/netflix-movie-4.jpg" class="netflix-movie" onclick="openModal(movies[3])">
+      <img src="img/netflix-movie-5.jpg" class="netflix-movie" onclick="openModal(movies[4])">
+      <img src="img/netflix-movie-6.jpg" class="netflix-movie" onclick="openModal(movies[5])">
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="movieModal">
+  <div class="modal-box">
+
+    <span class="close" onclick="closeModal()">✕</span>
+
+    <div class="modal-banner" id="modalBanner">
+      <div class="banner-overlay">
+        <div class="modal-content">
+          <h1 id="modalTitle"></h1>
+
+          <div class="tags">
+            <span id="modalYear"></span>
+            <span id="modalAge"></span>
+            <span id="modalGenre"></span>
+          </div>
+
+          <p id="modalDesc"></p>
+
+          <button onclick="playVideo()">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <section class="more-reasons">
+      <div class="container">
+        <h2 class="section-header">More Reasons to Join</h2>
+        <div class="reasons-cards-container">
+          <div class="reasons-card">
+            <h3 class="reason-header">Enjoy on your TV</h3>
+            <p class="reason-p">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+            </p>
+            <div class="reason-img-container">
+              <img src="img/netflix-tv.jpg" alt="Netflix TV Icon">
+            </div>
+          </div>
+          <div class="reasons-card">
+            <h3 class="reason-header">Download your shows to watch offline</h3>
+            <p class="reason-p">Save your favorites easily and always have something to watch.
+            </p>
+            <div class="reason-img-container">
+              <img src="img/netflix-download.jpg" alt="Netflix TV Icon">
+            </div>
+          </div>
+          <div class="reasons-card">
+            <h3 class="reason-header">Watch everywhere</h3>
+            <p class="reason-p">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+            </p>
+            <div class="reason-img-container">
+              <img src="img/netflix-watch.jpg" alt="Netflix TV Icon">
+            </div>
+          </div>
+          <div class="reasons-card">
+            <h3 class="reason-header">Create profiles for kids
+            </h3>
+            <p class="reason-p">Send kids on adventures with their favorite characters in a space made just for them —
+              free with your membership.
+            </p>
+            <div class="reason-img-container">
+              <img src="img/netflix-profiles.jpg" alt="Netflix TV Icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqs">
+      <div class="container">
+        <h2 class="section-header">Frequently Asked Questions</h2>
+        <div class="faq">
+          <h3 class="faq-question">What is Netflix?</h3>
+          <div class="faq-icon-container">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="faq-answer-container">
+          <div class="faq-text-container">
+            <p class="faq-answer">Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+              movies, anime, documentaries, and
+              more on thousands of internet-connected devices.</p>
+            <p class="faq-answer">You can watch as much as you want, whenever you want – all for one low monthly price.
+              There's always something new to
+              discover and new TV shows and movies are added every week!</p>
+          </div>
+        </div>
+        <div class="faq">
+          <h3 class="faq-question">How much does Netflix cost?</h3>
+          <div class="faq-icon-container">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="faq-answer-container">
+          <div class="faq-text-container">
+            <p class="faq-answer">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all
+              for one fixed monthly fee. Plans
+              range from $7.99 to $24.99 a month (pre-tax). No extra costs, no contracts.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <h3 class="faq-question">Where can I watch?</h3>
+          <div class="faq-icon-container">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="faq-answer-container">
+          <div class="faq-text-container">
+            <p class="faq-answer">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the
+              web at netflix.com from your
+              personal computer or on any internet-connected device that offers the Netflix app, including smart TVs,
+              smartphones,
+              tablets, streaming media players and game consoles.
+            </p>
+            <p class="faq-answer">You can also download your favorite shows with the iOS or Android app. Use downloads
+              to watch while you're on the go and
+              without an internet connection. Take Netflix with you anywhere.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <h3 class="faq-question">How do I cancel?</h3>
+          <div class="faq-icon-container">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="faq-answer-container">
+          <div class="faq-text-container">
+            <p class="faq-answer">Netflix is flexible. There are no pesky contracts and no commitments. You can easily
+              cancel your account online in two
+              clicks. There are no cancellation fees – start or stop your account anytime.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <h3 class="faq-question">What can I watch on Netflix?</h3>
+          <div class="faq-icon-container">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="faq-answer-container">
+          <div class="faq-text-container">
+            <p class="faq-answer">Netflix has an extensive library of feature films, documentaries, TV shows, anime,
+              award-winning Netflix originals, and
+              more. Watch as much as you want, anytime you want.</p>
+          </div>
+        </div>
+        <div class="faq">
+          <h3 class="faq-question">Is Netflix good for kids?</h3>
+          <div class="faq-icon-container">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="faq-answer-container">
+          <div class="faq-text-container">
+            <p class="faq-answer">The Netflix Kids experience is included in your membership to give parents control
+              while kids enjoy family-friendly TV
+              shows and movies in their own space.</p>
+            <p class="faq-answer">Kids profiles come with PIN-protected parental controls that let you restrict the
+              maturity rating of content kids can
+              watch and block specific titles you don’t want kids to see.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div class="container">
+        <p class="bottom-cta-p">
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <form class="email-cta-form">
+          <input type="email" class="email-input" placeholder="Email address" required>
+          <button class="get-started-btn" type="submit">Get Started <i class="fa-solid fa-chevron-right"></i></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="phone-number">Questions? Call <span class="underline">1-866-952-4456</span></p>
+      <div class="footer-menus-container">
+        <ul class="footer-menu">
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              FAQ
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Media Center
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Redeem Gift Cards
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Privacy
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Speed Test
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Ad Choices
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-menu">
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Help Center
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Investor Relations
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Buy Gift Cards
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Cookie Preferences
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Legal Notices
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-menu">
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Account
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Jobs
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Ways to Watch
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Coroporate Information
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Only on Netflix
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-menu">
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Netflix House
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Netflix Shop
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Terms of Use
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Contact Us
+            </a>
+          </li>
+          <li class="footer-menu-li">
+            <a class="footer-menu-link">
+              Do Not Sell or Share My Personal Information
+            </a>
+          </li>
+        </ul>
+      </div>
+      <form>
+        <div class="language-selector-wrapper">
+          <select class="language-selector">
+            <option value="english">English</option>
+            <option value="espanol">Espanol</option>
+          </select>
+        </div>
+      </form>
+      <p class="footer-recaptcha-text">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a
+          class="learn-more-link">Learn
+          more.</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
